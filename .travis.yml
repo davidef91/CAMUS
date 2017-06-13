@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "4.4"
+  - "6.1"
+services:
+  - mongodb
+  - redis-server
+before_install:
+  - npm i pm2 -g
+before_script:
+  - pm2 updatePM2
+  - sleep 20
